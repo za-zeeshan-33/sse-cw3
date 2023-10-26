@@ -10,7 +10,7 @@ def hello_world():
 
 @app.route("/submit", methods=["POST"])
 def submit():
-      input_name = request.form.get("name")
+    input_name = request.form.get("name")
     input_email = request.form.get("email")
     input_message = request.form.get("message")
     return render_template(
