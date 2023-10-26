@@ -16,9 +16,7 @@ jobs:
       run: flake8 api/
 
   deploy-to-vercel:
-    needs:
-      - python-formatting
-      - run-tests
+    needs: python-formatting
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
