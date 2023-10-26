@@ -29,7 +29,9 @@ jobs:
       run: pytest
 
   deploy-to-vercel:
-    needs: python-formatting
+    needs:
+      - python-formatting
+      - run-tests
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
